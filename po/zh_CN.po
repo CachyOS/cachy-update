@@ -406,8 +406,8 @@ msgstr "${update_number} 个更新可用"
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25 src/lib/tray.py:296
 #, sh-format
-msgid "Run Arch-Update"
-msgstr "运行 Arch-Update"
+msgid "Run Cachy-Update"
+msgstr "运行 Cachy-Update"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
