@@ -729,8 +729,8 @@ msgid "Arch-Update"
 msgstr "Arch-Update"
 
 #: src/lib/tray.py:296
-msgid "Run Arch-Update"
-msgstr "Arch-Update ausführen"
+msgid "Run Cachy-Update"
+msgstr "Cachy-Update ausführen"
 
 #: src/lib/tray.py:297
 msgid "Check for updates"
