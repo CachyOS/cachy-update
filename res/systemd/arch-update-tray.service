@@ -4,7 +4,7 @@ After=graphical-session.target
 
 [Service]
 ExecStartPre=-/bin/sh -c '/usr/bin/arch-update --tray --enable 2>/dev/null'
-ExecStart=/bin/sh -c "sleep 5 && arch-update --tray"
+ExecStart=/bin/sh -c "sleep 3 && arch-update --tray"
 Restart=on-failure
 
 [Install]
