@@ -4,5 +4,5 @@ Comment[fr]=Applet systray pour Arch-Update
 Comment=Systray applet for Arch-Update
 Icon=arch-update_updates-available-blue
 Type=Application
-Exec=arch-update --tray
+Exec=/bin/sh -c "sleep 3 && arch-update --tray"
 Categories=Utility
