@@ -13,6 +13,7 @@ build:
 	scdoc < "doc/man/fr/${pkgname}.conf.5.scd" > "doc/man/fr/${pkgname}.conf.5"
 
 	# Generate translation files
+	msgfmt po/pt_BR.po -o po/pt_BR.mo
 	msgfmt po/fr.po -o po/fr.mo
 	msgfmt po/sv.po -o po/sv.mo
 	msgfmt po/zh_CN.po -o po/zh_CN.mo
@@ -42,7 +43,7 @@ install:
 	install -Dm 644 "res/systemd/${pkgname}.service" "${DESTDIR}${PREFIX}/lib/systemd/user/${pkgname}.service"
 	install -Dm 644 "res/systemd/${pkgname}.timer" "${DESTDIR}${PREFIX}/lib/systemd/user/${pkgname}.timer"
 	install -Dm 644 "res/systemd/${pkgname}-tray.service" "${DESTDIR}${PREFIX}/lib/systemd/user/${pkgname}-tray.service"
-  
+
 	# Install shell completions
 	install -Dm 644 "res/completions/${pkgname}.bash" "${DESTDIR}${PREFIX}/share/bash-completion/completions/${pkgname}"
 	install -Dm 644 "res/completions/${pkgname}.zsh" "${DESTDIR}${PREFIX}/share/zsh/site-functions/_${pkgname}"
@@ -55,7 +56,7 @@ install:
 	install -Dm 644 "doc/man/fr/${pkgname}.conf.5" "${DESTDIR}${PREFIX}/share/man/fr/man5/${pkgname}.conf.5"
 
 	# Install translation files
-	# Translation files are installed as "Arch-Update.mo" to avoid conflicting with the "arch-update.mo" files shipped by the arch-update Gnome extension (https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/)
+	install -Dm 644 po/pt_BR.mo "${DESTDIR}${PREFIX}/share/locale/pt_BR/LC_MESSAGES/${_pkgname}.mo"
 	install -Dm 644 po/fr.mo "${DESTDIR}${PREFIX}/share/locale/fr/LC_MESSAGES/${_pkgname}.mo"
 	install -Dm 644 po/sv.mo "${DESTDIR}${PREFIX}/share/locale/sv/LC_MESSAGES/${_pkgname}.mo"
 	install -Dm 644 po/zh_CN.mo "${DESTDIR}${PREFIX}/share/locale/zh_CN/LC_MESSAGES/${_pkgname}.mo"
@@ -77,6 +78,7 @@ clean:
 	rm -f "doc/man/fr/${pkgname}.conf.5"
 
 	# Delete generated translation files
+	rm -f po/pt_BR.mo
 	rm -f po/fr.mo
 	rm -f po/sv.mo
 	rm -f po/zh_CN.mo
@@ -104,6 +106,7 @@ uninstall:
 	rm -f "${DESTDIR}${PREFIX}/lib/systemd/user/${pkgname}-tray.service"
 
 	# Delete .mo files
+	rm -f "${DESTDIR}${PREFIX}/share/locale/pt_BR/LC_MESSAGES/${_pkgname}.mo"
 	rm -f "${DESTDIR}${PREFIX}/share/locale/fr/LC_MESSAGES/${_pkgname}.mo"
 	rm -f "${DESTDIR}${PREFIX}/share/locale/sv/LC_MESSAGES/${_pkgname}.mo"
 	rm -f "${DESTDIR}${PREFIX}/share/locale/zh_CN/LC_MESSAGES/${_pkgname}.mo"
