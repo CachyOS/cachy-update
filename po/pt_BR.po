@@ -684,7 +684,7 @@ msgstr ""
 #: src/lib/restart_services.sh:70
 #, sh-format
 msgid "No service requiring a post upgrade restart found\\n"
-msgstr "Nenhum serviço requiring uma reinicialização pós-atualização encontrado\\n"
+msgstr "Nenhum serviço solicitanto uma reinicialização pós-atualização encontrado\\n"
 
 #: src/lib/tray.py:166
 msgid "'updates' state file isn't found"
