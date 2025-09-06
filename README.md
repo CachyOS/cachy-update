@@ -1,4 +1,4 @@
-# Cachy-Update (fork of Arch-Update)
+# Cachy-Update (fork of [Arch-Update](https://github.com/Antiz96/arch-update))
 
 <p align="center">
   <img width="460" height="300" src="https://github.com/user-attachments/assets/5782bd11-084a-4ca3-b599-1c322ee11b84">
