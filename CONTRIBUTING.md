@@ -11,6 +11,7 @@ Please, don't refrain yourself from contributing if you feel that your contribut
 - [General rules](#general-rules)
 - [Open an issue](#open-an-issue)
 - [Open a pull request](#open-a-pull-request)
+- [Translation](#Translation)
 - [Donations](#donations)
 - [Thank you](#thank-you)
 
@@ -49,6 +50,7 @@ When submitting code changes, try to respect the coding style and the overall wa
 For instance:
 
 - Stick to bash syntax
+- Use tabs
 - Variables should use the `"${var}"` format
 - Use the `{main,info,ask,warning,error}_msg` functions to print messages
 - Use `"$(eval_gettext "string")"` for any string chain that should be included in translations
@@ -119,6 +121,10 @@ People that installed Arch-Update from source will have to either uninstall it (
 ### License
 
 By contributing to this project, you agree that your contributions will be licensed under the [GPL-3.0 license](https://github.com/Antiz96/arch-update/blob/main/LICENSE) (or any later version of this license).
+
+## Translation
+
+To contribute to translations, please follow the instructions in the [dedicated discussion thread](https://github.com/Antiz96/arch-update/discussions/436).
 
 ## Donations
 
