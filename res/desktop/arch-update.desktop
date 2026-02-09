@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Cachy-Update
-Comment[fr]=Un notificateur & applicateur de mises à jour pour Cachy Linux
-Comment=An update notifier & applier for Cachy Linux
+Comment[fr]=Un notificateur & applicateur de mises à jour pour CachyOS
+Comment=An update notifier & applier for CachyOS
 Icon=cachy-update-blue
 Type=Application
 Terminal=true
