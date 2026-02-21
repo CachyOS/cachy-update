@@ -225,16 +225,17 @@ Si l'applet systray ne démarre toujours pas au démarrage du système, essayez 
 
 ### Modifier le cycle de vérification
 
-Si vous avez activé le [timer systemd](#le-timer-systemd), une vérification des mises à jour disponible est lancée au démarrage du système puis une fois par heure.
+Si vous avez activé le [timer systemd](#le-timer-systemd), une vérification des mises à jour disponible est lancée au démarrage du système puis une fois par jour.
 
-Si vous souhaitez personnaliser le cycle de vérification, exécutez la commande `systemctl --user edit --full arch-update.timer` et modifiez la valeur `OnUnitActiveSec` à votre convenance.  
-Par exemple, si vous voulez qu'`Arch-Update` vérifie plutôt les nouvelles mises à jour toutes les 10 minutes :
+Si vous souhaitez personnaliser le cycle de vérification, exécutez la commande `systemctl --user edit --full arch-update.timer` et modifiez la valeur `OnUnitActiveSec` à votre convenance.
+Par exemple, si vous voulez qu'`Arch-Update` vérifie plutôt les nouvelles mises à jour toutes les heures :
 
 ```text
 [...]
 [Timer]
-OnStartupSec=15
-OnUnitActiveSec=10m
+OnStartupSec=2min
+RandomizedDelaySec=1h
+OnUnitActiveSec=1h
 [...]
 ```
 
