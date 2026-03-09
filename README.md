@@ -16,7 +16,7 @@
 
 ## Description
 
-An update notifier & applier for CachyOS that assists you with important pre / post update tasks.  
+An interactive update notifier & applier for CachyOS that assists you with important pre / post update tasks.  
 Includes a dynamic & clickeable systray applet for an easy integration with any Desktop Environment / Window Manager.
 
 Arch-Update is designed to follow usual system maintenance steps, as described in the [Arch Wiki](https://wiki.archlinux.org/title/System_maintenance).
