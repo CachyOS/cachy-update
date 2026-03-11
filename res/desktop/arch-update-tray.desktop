@@ -1,6 +1,9 @@
 [Desktop Entry]
 Name=Cachy-Update Systray Applet
 Comment=Systray applet for Cachy-Update
+Comment[fr]=Applet systray pour Cachy-Update
+Comment[nb]=Miniprogam for å legge Cachy-Update i systemkurven
+Comment[ja]=Cachy-Update 用のシステムトレイアプレット
 Icon=cachy-update_updates-available-blue
 Type=Application
 Exec=arch-update --tray
