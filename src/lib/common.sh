@@ -205,6 +205,21 @@ icon_updates-available() {
 	echo "cachy-update_updates-available-${tray_icon_style}${colorblind_mode}" > "${statedir}/tray_icon"
 }
 
+# Definition of the parse_pacman_si function: Parse build dates for packages using pacman -Si
+parse_pacman_si() {
+	awk '
+		/^Name[ \t]*:/ {n=$0; sub(/^[^:]*:[ \t]*/, "", n)}
+		/^Build Date[ \t]*:/ {b=$0; sub(/^[^:]*:[ \t]*/, "", b)}
+		/^$/ {
+			if (n) {
+				print n "|" b
+				n=""; b=""
+			}
+		}
+		END {if (n) print n "|" b}
+	'
+}
+
 # Definition of commands to always run on exit (e.g. cleanup of files / dirs which have no purpose being kept)
 cleanup() {
 	# shellcheck disable=SC2154

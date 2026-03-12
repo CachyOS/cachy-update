@@ -17,6 +17,41 @@ else
 	packages=$(CHECKUPDATES_DB="${checkupdates_db_tmpdir}" checkupdates "${contrib_color_opt[@]}" | awk '{print $1}')
 fi
 
+# --- ADDED: Fetch and append build dates as relative time ---
+if [ -n "${packages}" ]; then
+	declare -A pkg_ts
+	while IFS='|' read -r pkg bdate; do
+		pkg_ts["${pkg}"]=$(date -d "${bdate}" +%s 2>/dev/null)
+	done < <(echo "${packages}" | sed -r 's/\x1B\[[0-9;]*m//g' | awk '{print $1}' | xargs -r env LC_ALL=C pacman -Si --dbpath "${checkupdates_db_tmpdir}" 2>/dev/null | parse_pacman_si)
+
+	now=$(date +%s)
+	parsed_pkgs=""
+
+	while IFS= read -r line; do
+		[ -z "${line}" ] && continue
+		pkg=$(echo "${line}" | sed -r 's/\x1B\[[0-9;]*m//g' | awk '{print $1}')
+
+		if [ -n "${pkg_ts[${pkg}]}" ]; then
+			diff=$((now - pkg_ts[${pkg}]))
+			[ "${diff}" -lt 0 ] && diff=0
+
+			d=$((diff / 86400))
+			h=$(((diff % 86400) / 3600))
+			m=$(((diff % 3600) / 60))
+
+			if [ "${d}" -gt 0 ]; then rel="${d}d ${h}h"
+			elif [ "${h}" -gt 0 ]; then rel="${h}h ${m}m"
+			else rel="${m}m"; fi
+
+			line="${line} ${blue}[${rel}]${color_off}"
+		fi
+		parsed_pkgs="${parsed_pkgs:+${parsed_pkgs}$'\n'}${line}"
+	done <<< "${packages}"
+
+	packages="${parsed_pkgs}"
+fi
+# --- END ADDED CODE ---
+
 if [ -n "${aur_helper}" ]; then
 	if [ -z "${no_version}" ]; then
 		# shellcheck disable=SC2154
