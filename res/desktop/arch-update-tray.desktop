@@ -4,6 +4,7 @@ Comment=Systray applet for Cachy-Update
 Comment[de]=Cachy-Update-Minianwendung für den Benachrichtigungsbereich
 Comment[fr]=Applet systray pour Cachy-Update
 Comment[ja]=Cachy-Update 用のシステムトレイアプレット
+Comment[ka]=Cachy-Update-ის აპლეტი სისტემურ საათთან
 Comment[nb]=Miniprogam for å legge Cachy-Update i systemkurven
 Icon=cachy-update_updates-available-blue
 Type=Application
