@@ -15,11 +15,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: eu_ES\n"
+"X-Source-Language: C\n"
 
 #: src/lib/alhp_check.sh:14
 #, sh-format
-msgid "Your primary ALHP mirror is out of date!"
-msgstr "Zure ALHP ispilu nagusia zaharkituta dago!"
+msgid "Your primary ALHP mirror is out of date!\\n"
+msgstr "Zure ALHP ispilu nagusia zaharkituta dago!\\n"
 
 #: src/lib/alhp_check.sh:20
 #, sh-format
@@ -305,14 +308,14 @@ msgstr ""
 msgid "Would you like to reboot now? [y/N]"
 msgstr "Orain berrabiarazi nahi duzu? [b/E]"
 
-#: src/lib/kernel_reboot.sh:15 src/lib/list_packages.sh:117
+#: src/lib/kernel_reboot.sh:15 src/lib/list_packages.sh:131
 #: src/lib/orphan_packages.sh:25 src/lib/orphan_packages.sh:59
 #: src/lib/packages_cache.sh:30 src/lib/pacnew_files.sh:21
 #, sh-format
 msgid "Y"
 msgstr "B"
 
-#: src/lib/kernel_reboot.sh:15 src/lib/list_packages.sh:117
+#: src/lib/kernel_reboot.sh:15 src/lib/list_packages.sh:131
 #: src/lib/orphan_packages.sh:25 src/lib/orphan_packages.sh:59
 #: src/lib/packages_cache.sh:30 src/lib/pacnew_files.sh:21
 #, sh-format
@@ -432,32 +435,53 @@ msgstr "URL:"
 msgid "Looking for updates...\\n"
 msgstr "Eguneraketak bilatzen...\\n"
 
-#: src/lib/list_packages.sh:77
+#: src/lib/list_packages.sh:16
+#, sh-format
+msgid "Unable to retrieve Packages updates (request timeout)\\n"
+msgstr ""
+"Ezin izan dira paketeen eguneraketak eskuratu (eskaeraren denbora-muga "
+"gainditu da)\\n"
+
+#: src/lib/list_packages.sh:32
+#, sh-format
+msgid "Unable to retrieve AUR Packages updates (request timeout)\\n"
+msgstr ""
+"Ezin izan dira AUR paketeen eguneraketak eskuratu (eskaeraren denbora-muga "
+"gainditu da)\\n"
+
+#: src/lib/list_packages.sh:44
+#, sh-format
+msgid "Unable to retrieve Flatpak packages updates (request timeout)\\n"
+msgstr ""
+"Ezin izan dira Flatpak paketeen eguneraketak eskuratu (eskaeraren denbora-"
+"muga gainditu da)\\n"
+
+#: src/lib/list_packages.sh:91
 #, sh-format
 msgid "Packages:"
 msgstr "Paketeak:"
 
-#: src/lib/list_packages.sh:84
+#: src/lib/list_packages.sh:98
 #, sh-format
 msgid "AUR Packages:"
 msgstr "AUR paketeak:"
 
-#: src/lib/list_packages.sh:91
+#: src/lib/list_packages.sh:105
 #, sh-format
 msgid "Flatpak Packages:"
 msgstr "Flatpak paketeak:"
 
-#: src/lib/list_packages.sh:101
+#: src/lib/list_packages.sh:115
 #, sh-format
 msgid "No update available\\n"
 msgstr "Ez dago eguneraketa erabilgarririk\\n"
 
-#: src/lib/list_packages.sh:113
+#: src/lib/list_packages.sh:127
 #, sh-format
 msgid "Proceed with update? [Y/n]"
 msgstr "Eguneraketarekin jarraitu? [B/e]"
 
-#: src/lib/list_packages.sh:123
+#: src/lib/list_packages.sh:137
 #, sh-format
 msgid "The update has been aborted\\n"
 msgstr "Eguneraketa bertan behera utzi da\\n"
