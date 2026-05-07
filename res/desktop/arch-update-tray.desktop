@@ -7,6 +7,7 @@ Comment[fr]=Applet systray pour Cachy-Update
 Comment[ja]=Cachy-Update 用のシステムトレイアプレット
 Comment[ka]=Cachy-Update-ის აპლეტი სისტემურ საათთან
 Comment[nb]=Miniprogam for å legge Cachy-Update i systemkurven
+Comment[be]=Аплет сістэмнага трэя для Cachy-Update
 Icon=cachy-update_updates-available-blue
 Type=Application
 Exec=arch-update --tray

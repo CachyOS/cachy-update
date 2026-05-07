@@ -7,6 +7,7 @@ Comment[fr]=Un notificateur & applicateur de mises à jour interactif pour Cachy
 Comment[ja]=CachyOS 用の対話式アップデート通知 & 適用システム
 Comment[ka]=ინტერაქტიური განახლებების შეტყობინება და გადატარება CachyOS-ისთვის
 Comment[nb]=En interaktiv oppdateringsvarsler og -gjennomfører for CachyOS
+Comment[be]=Інтэрактыўны апавяшчальнік і ўсталёўшчык абнаўленняў для CachyOS
 Icon=cachy-update-blue
 Type=Application
 Terminal=true
