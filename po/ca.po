@@ -1,0 +1,237 @@
+# Arch-Update translation template
+# Copyright (C) 2024 Robin Candau <robincandau@protonmail.com>
+# This file is distributed under the same license as the Arch-Update package.
+#
+# Translators:
+# Daniel Talens <dtalens@dtalens.com>, 2026
+msgid ""
+msgstr ""
+"Project-Id-Version: Arch-Update 3.19.4\n"
+"Report-Msgid-Bugs-To: https://github.com/Antiz96/arch-update/issues\n"
+"POT-Creation-Date: 2024-03-17 16:22+0100\n"
+"PO-Revision-Date: 2026-05-24 18:53+0200\n"
+"Last-Translator: Daniel Talens <dtalens@dtalens.com>\n"
+"Language-Team: \n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.9\n"
+
+#: src/lib/alhp_check.sh:14
+#, sh-format
+msgid "Your primary ALHP mirror is out of date!\\n"
+msgstr "El vostre rèplica principal d'ALHP està desactualitzada!\\n"
+
+#: src/lib/alhp_check.sh:20
+#, sh-format
+msgid "The following packages still have pending ALHP builds:"
+msgstr "Els paquets següents encara tenen construccions d'ALHP pendents:"
+
+#: src/lib/alhp_check.sh:24
+#, sh-format
+msgid "Do you want to continue with the update?"
+msgstr "Voleu continuar amb l'actualització?"
+
+#: src/lib/arch_update.sh:22
+#, sh-format
+msgid "Checking for updates..."
+msgstr "S'estan comprovant les actualitzacions..."
+
+#: src/lib/arch_update.sh:37
+#, sh-format
+msgid "The databases are up to date"
+msgstr "Les bases de dades estan actualitzades"
+
+#: src/lib/arch_update.sh:65
+#, sh-format
+msgid ""
+"Arch-Update needs a network connection to check for updates. Make sure you have a "
+"working internet connection and try again."
+msgstr ""
+"L'Arch-Update necessita una connexió de xarxa per a comprovar si hi ha actualitzacions. "
+"Assegureu-vos que teniu una connexió a Internet activa i torneu-ho a provar."
+
+#: src/lib/arch_update.sh:91
+#, sh-format
+msgid "Your system is up to date"
+msgstr "El sistema està actualitzat"
+
+#: src/lib/arch_update.sh:100
+#, sh-format
+msgid "${_count} update available"
+msgid_plural "${_count} updates available"
+msgstr[0] "${_count} actualització disponible"
+msgstr[1] "${_count} actualitzacions disponibles"
+
+#: src/lib/arch_update.sh:131
+#, sh-format
+msgid "Failed to run 'checkupdates'"
+msgstr "Ha fallat l'execució de «checkupdates»"
+
+#: src/lib/arch_update.sh:145
+#, sh-format
+msgid "Failed to run 'yay -Qua'"
+msgstr "Ha fallat l'execució de «yay -Qua»"
+
+#: src/lib/arch_update.sh:159
+#, sh-format
+msgid "Failed to run 'paru -Qua'"
+msgstr "Ha fallat l'execució de «paru -Qua»"
+
+#: src/lib/arch_update.sh:173
+#, sh-format
+msgid "Failed to run 'flatpak update'"
+msgstr "Ha fallat l'execució de «flatpak update»"
+
+#: src/lib/arch_update.sh:216
+#, sh-format
+msgid ""
+"A full system upgrade is already running (pacman lock file '${pacman_lock}' is present)"
+msgstr ""
+"Ja s'està executant una actualització completa del sistema (el fitxer de bloqueig de "
+"pacman «${pacman_lock}» és present)"
+
+#: src/lib/arch_update.sh:228
+#, sh-format
+msgid "Authentication failed or canceled"
+msgstr "L'autenticació ha fallat o s'ha cancel·lat"
+
+#: src/lib/arch_update.sh:233
+#, sh-format
+msgid "Starting full system upgrade..."
+msgstr "S'està iniciant l'actualització completa del sistema..."
+
+#: src/lib/arch_update.sh:255
+#, sh-format
+msgid "Full system upgrade completed successfully"
+msgstr "L'actualització completa del sistema s'ha completat correctament"
+
+#: src/lib/arch_update.sh:259
+#, sh-format
+msgid "Full system upgrade failed"
+msgstr "Ha fallat l'actualització completa del sistema"
+
+#: src/lib/arch_update.sh:267
+#, sh-format
+msgid ""
+"Arch-Update needs a network connection to perform the upgrade. Make sure you have a "
+"working internet connection and try again."
+msgstr ""
+"L'Arch-Update necessita una connexió de xarxa per a realitzar l'actualització. "
+"Assegureu-vos que teniu una connexió a Internet activa i torneu-ho a provar."
+
+#: src/lib/aur_check.sh:17
+#, sh-format
+msgid "The following AUR packages are unmaintained or orphaned:"
+msgstr "Els paquets de l'AUR següents no tenen mantenidor o estan orfes:"
+
+#: src/lib/aur_check.sh:21 src/lib/devel_check.sh:34 src/lib/ignored_check.sh:18
+#: src/lib/news_check.sh:38
+#, sh-format
+msgid "Do you want to continue?"
+msgstr "Voleu continuar?"
+
+#: src/lib/devel_check.sh:23
+#, sh-format
+msgid "The following VCS packages have pending updates:"
+msgstr "Els paquets VCS següents tenen actualitzacions pendents:"
+
+#: src/lib/ignored_check.sh:14
+#, sh-format
+msgid "The following packages are ignored and have pending updates:"
+msgstr "Els paquets següents estan ignorats i tenen actualitzacions pendents:"
+
+#: src/lib/kernel_check.sh:17
+#, sh-format
+msgid "The system needs to be rebooted following a kernel update"
+msgstr "Cal reiniciar el sistema després d'una actualització del nucli (kernel)"
+
+#: src/lib/news_check.sh:30
+#, sh-format
+msgid "There is 1 unread news item on Arch Linux Homepage:"
+msgid_plural "There are ${_count} unread news items on Arch Linux Homepage:"
+msgstr[0] "Hi ha 1 notícia sense llegir a la pàgina principal d'Arch Linux:"
+msgstr[1] "Hi ha ${_count} notícies sense llegir a la pàgina principal d'Arch Linux:"
+
+#: src/lib/news_check.sh:51
+#, sh-format
+msgid "Failed to check Arch Linux news"
+msgstr "Ha fallat la comprovació de les notícies d'Arch Linux"
+
+#: src/lib/pacnew_check.sh:16
+#, sh-format
+msgid "The following .pacnew/.pacsave files have been found:"
+msgstr "S'hant trobat els fitxers .pacnew/.pacsave següents:"
+
+#: src/lib/tray.py:100
+msgid "Show updates"
+msgstr "Mostra les actualitzacions"
+
+#: src/lib/tray.py:105
+msgid "Upgrade system"
+msgstr "Actualitza el sistema"
+
+#: src/lib/tray.py:115
+msgid "No pending updates"
+msgstr "No hi ha actualitzacions pendents"
+
+#: src/lib/tray.py:149
+msgid "Hide updates"
+msgstr "Amaga les actualitzacions"
+
+#: src/lib/tray.py:270 src/lib/tray.py:385
+msgid "Arch-Update"
+msgstr "Arch-Update"
+
+#: src/lib/tray.py:386
+msgid "Check for updates"
+msgstr "Comprova si hi ha actualitzacions"
+
+#: src/lib/tray.py:387
+msgid "Exit"
+msgstr "Surt"
+
+#: src/lib/tray.py:390
+msgid "All"
+msgstr "Tots"
+
+#: src/lib/tray.py:391
+msgid "Packages"
+msgstr "Paquets"
+
+#: src/lib/tray.py:392
+msgid "AUR"
+msgstr "AUR"
+
+#: src/lib/tray.py:393
+msgid "Flatpak"
+msgstr "Flatpak"
+
+#: src/lib/tray.sh:20
+#, sh-format
+msgid "${_name} tray desktop file not found"
+msgstr "No s'ha trobat el fitxer desktop de la bústia de ${_name}"
+
+#: src/lib/tray.sh:27
+#, sh-format
+msgid "The '${tray_desktop_file_autostart}' file already exists"
+msgstr "El fitxer «${tray_desktop_file_autostart}» ja existeix"
+
+#: src/lib/tray.sh:32
+#, sh-format
+msgid ""
+"The '${tray_desktop_file_autostart}' file has been created, the ${_name} systray applet "
+"will be automatically started at your next log on\\nTo start it right now, you can "
+"launch the \"${_name} Systray Applet\" application from your app menu"
+msgstr ""
+"S'ha creat el fitxer «${tray_desktop_file_autostart}». La miniaplicació de la bústia de "
+"sistema de ${_name} s'iniciarà automàticament a la propera sessió.\\nPer a iniciar-la "
+"ara mateix, podeu llançar l'aplicació «${_name} Systray Applet» des del vostre menú "
+"d'aplicacions"
+
+#: src/lib/tray.sh:49
+#, sh-format
+msgid "There's already a running instance of the ${_name} systray applet"
+msgstr "Ja hi ha una instància en execució de la miniaplicació de la bústia de ${_name}"
