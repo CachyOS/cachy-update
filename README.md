@@ -184,17 +184,17 @@ If no news has been published since the last run, `Cachy-Update` directly asks f
 
 From there, just let `Cachy-Update` guide you through the various steps required for a complete and proper update of your system! :smile:
 
-Certain options can be enabled, disabled or modified via the `arch-update.conf` configuration file. See the [arch-update.conf(5) man page](https://github.com/CachyOS/cachy-update/blob/main/doc/man/arch-update.conf.5.scd) for more details.
+Certain options can be enabled, disabled or modified via the `arch-update.conf` configuration file. See the [arch-update.conf(5) man page](https://raw.githubusercontent.com/CachyOS/cachy-update/refs/heads/main/doc/man/arch-update.conf.5.scd) for more details.
 
 ## Documentation
 
 ### arch-update
 
-See `arch-update --help` and the [arch-update(1) man page](https://github.com/CachyOS/cachy-update/blob/main/doc/man/arch-update.1.scd).
+See `arch-update --help` and the [arch-update(1) man page](https://raw.githubusercontent.com/CachyOS/cachy-update/refs/heads/main/doc/man/arch-update.1.scd).
 
 ### arch-update configuration file
 
-See the [arch-update.conf(5) man page](https://github.com/CachyOS/cachy-update/blob/main/doc/man/arch-update.conf.5.scd).
+See the [arch-update.conf(5) man page](https://raw.githubusercontent.com/CachyOS/cachy-update/refs/heads/main/doc/man/arch-update.conf.5.scd).
 
 ## Tips and tricks
 
