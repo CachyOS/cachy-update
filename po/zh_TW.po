@@ -505,7 +505,8 @@ msgid "1 update available"
 msgstr "1 個更新可用"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
-#: src/lib/notification.sh:23 src/lib/notification.sh:25 src/lib/tray.py:385
+#: src/lib/notification.sh:23 src/lib/notification.sh:25
+#: src/tray/src/tray.rs:224
 #, sh-format
 msgid "Run Cachy-Update"
 msgstr "執行 Cachy-Update"
@@ -804,10 +805,6 @@ msgstr ""
 msgid "Next check in {next_check}"
 msgstr "下次檢查於 {next_check}"
 
-#: src/tray/src/tray.rs:224
-msgid "Run Arch-Update"
-msgstr "執行 Arch-Update"
-
 #: src/tray/src/tray.rs:232
 msgid "Check for updates"
 msgstr "檢查更新"
@@ -815,3 +812,4 @@ msgstr "檢查更新"
 #: src/tray/src/tray.rs:243
 msgid "Exit"
 msgstr "離開"
+

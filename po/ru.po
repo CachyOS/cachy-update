@@ -530,7 +530,8 @@ msgid "1 update available"
 msgstr "Доступно 1 обновление"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
-#: src/lib/notification.sh:23 src/lib/notification.sh:25 src/lib/tray.py:385
+#: src/lib/notification.sh:23 src/lib/notification.sh:25
+#: src/tray/src/tray.rs:224
 #, sh-format
 msgid "Run Cachy-Update"
 msgstr "Запустить Cachy-Update"
@@ -840,10 +841,6 @@ msgstr "Последняя проверка: {last_check} назад"
 msgid "Next check in {next_check}"
 msgstr "Следующая проверка через {next_check}"
 
-#: src/tray/src/tray.rs:224
-msgid "Run Arch-Update"
-msgstr "Запустить Arch-Update"
-
 #: src/tray/src/tray.rs:232
 msgid "Check for updates"
 msgstr "Проверить обновления"
@@ -851,3 +848,4 @@ msgstr "Проверить обновления"
 #: src/tray/src/tray.rs:243
 msgid "Exit"
 msgstr "Выход"
+

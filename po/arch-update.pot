@@ -479,7 +479,8 @@ msgid "1 update available"
 msgstr ""
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
-#: src/lib/notification.sh:23 src/lib/notification.sh:25 src/lib/tray.py:385
+#: src/lib/notification.sh:23 src/lib/notification.sh:25
+#: src/tray/src/tray.rs:224
 #, sh-format
 msgid "Run Cachy-Update"
 msgstr ""
@@ -774,10 +775,6 @@ msgstr ""
 #: src/tray/src/tray.rs:207
 #, rust-format
 msgid "Next check in {next_check}"
-msgstr ""
-
-#: src/tray/src/tray.rs:224
-msgid "Run Arch-Update"
 msgstr ""
 
 #: src/tray/src/tray.rs:232
