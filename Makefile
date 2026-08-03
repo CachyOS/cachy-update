@@ -34,15 +34,15 @@ install:
 	install -Dm 755 "src/tray/target/release/${pkgname}-tray" "${DESTDIR}${PREFIX}/lib/${pkgname}/${pkgname}-tray"
 
 	# Install icons
-	install -Dm 664 "res/icons/${pkgname}-blue.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}-blue.svg"
-	install -Dm 664 "res/icons/${pkgname}_updates-available-blue.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-blue.svg"
-	install -Dm 664 "res/icons/${pkgname}_updates-available-blue-cb.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-blue-cb.svg"
-	install -Dm 664 "res/icons/${pkgname}-light.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}-light.svg"
-	install -Dm 664 "res/icons/${pkgname}_updates-available-light.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-light.svg"
-	install -Dm 664 "res/icons/${pkgname}_updates-available-light-cb.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-light-cb.svg"
-	install -Dm 664 "res/icons/${pkgname}-dark.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}-dark.svg"
-	install -Dm 664 "res/icons/${pkgname}_updates-available-dark.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-dark.svg"
-	install -Dm 664 "res/icons/${pkgname}_updates-available-dark-cb.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-dark-cb.svg"
+	install -Dm 664 "res/icons/cachy-update-blue.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update-blue.svg"
+	install -Dm 664 "res/icons/cachy-update_updates-available-blue.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-blue.svg"
+	install -Dm 664 "res/icons/cachy-update_updates-available-blue-cb.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-blue-cb.svg"
+	install -Dm 664 "res/icons/cachy-update-light.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update-light.svg"
+	install -Dm 664 "res/icons/cachy-update_updates-available-light.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-light.svg"
+	install -Dm 664 "res/icons/cachy-update_updates-available-light-cb.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-light-cb.svg"
+	install -Dm 664 "res/icons/cachy-update-dark.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update-dark.svg"
+	install -Dm 664 "res/icons/cachy-update_updates-available-dark.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-dark.svg"
+	install -Dm 664 "res/icons/cachy-update_updates-available-dark-cb.svg" "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-dark-cb.svg"
 
 	# Install .desktop files
 	install -Dm 644 "res/desktop/${pkgname}.desktop" "${DESTDIR}${PREFIX}/share/applications/${pkgname}.desktop"
@@ -97,15 +97,15 @@ uninstall:
 	rm -rf "${DESTDIR}${PREFIX}/lib/${pkgname}/"
 
 	# Delete icons
-	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}-blue.svg"
-	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-blue.svg"
-	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-blue-cb.svg"
-	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}-light.svg"
-	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-light.svg"
-	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-light-cb.svg"
-	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}-dark.svg"
-	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-dark.svg"
-	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${pkgname}_updates-available-dark-cb.svg"
+	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update-blue.svg"
+	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-blue.svg"
+	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-blue-cb.svg"
+	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update-light.svg"
+	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-light.svg"
+	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-light-cb.svg"
+	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update-dark.svg"
+	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-dark.svg"
+	rm -f "${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/cachy-update_updates-available-dark-cb.svg"
 
 	# Delete .desktop files
 	rm -f "${DESTDIR}${PREFIX}/share/applications/${pkgname}.desktop"
