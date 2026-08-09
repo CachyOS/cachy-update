@@ -3,6 +3,7 @@
 //! https://github.com/iovxw/ksni
 //! https://crates.io/crates/ksni
 
+use anyhow::Context;
 use gettextrs::*;
 use ksni::TrayMethods;
 use ksni::menu::*;
@@ -258,25 +259,7 @@ pub async fn run(
     icon_statefile: PathBuf,
     updates_statefile_type: updates_statefiles::UpdatesStateFiles,
     desktop_file: PathBuf,
-    i18n_dir: String,
-) {
-    // Set gettext domain for translations
-    if setlocale(LocaleCategory::LcMessages, "").is_none() {
-        warn!("Unable to load locale environment");
-    }
-
-    if textdomain("Arch-Update").is_err() {
-        warn!("Unable to set gettext domain");
-    }
-
-    if bindtextdomain("Arch-Update", &i18n_dir).is_err() {
-        warn!("Unable to bind gettext domain path");
-    }
-
-    if bind_textdomain_codeset("Arch-Update", "UTF-8").is_err() {
-        warn!("Unable to set gettext domain codeset");
-    }
-
+) -> anyhow::Result<()> {
     // Clone icon statefile path variable (used by the watcher)
     let watcher_icon_statefile = icon_statefile.clone();
 
@@ -287,10 +270,10 @@ pub async fn run(
     };
 
     // Start the systray applet
-    let handle = tray.spawn().await.unwrap_or_else(|error| {
-        error!("Unable to start the systray applet: {error}");
-        process::exit(1);
-    });
+    let handle = tray
+        .spawn()
+        .await
+        .context("Unable to start the systray applet")?;
 
     info!("Systray applet started");
 
@@ -301,5 +284,7 @@ pub async fn run(
     ));
 
     // Run forever
-    future::pending().await
+    future::pending::<()>().await;
+
+    Ok(())
 }
