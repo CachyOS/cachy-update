@@ -545,7 +545,7 @@ msgstr "Даступна 1 абнаўленне"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
-#: src/tray/src/tray.rs:224
+#: src/tray/src/tray.rs:225
 #, sh-format
 msgid "Run Cachy-Update"
 msgstr "Запусціць Cachy-Update"
@@ -864,4 +864,3 @@ msgstr "Праверыць абнаўленні"
 #: src/tray/src/tray.rs:244
 msgid "Exit"
 msgstr "Выйсці"
-

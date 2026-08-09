@@ -553,7 +553,7 @@ msgstr "Eguneraketa 1 erabilgarri"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
-#: src/tray/src/tray.rs:224
+#: src/tray/src/tray.rs:225
 #, sh-format
 msgid "Run Cachy-Update"
 msgstr "Exekutatu Cachy-Update"
@@ -880,4 +880,3 @@ msgstr "Eguneraketak bilatu"
 #: src/tray/src/tray.rs:244
 msgid "Exit"
 msgstr "Irten"
-

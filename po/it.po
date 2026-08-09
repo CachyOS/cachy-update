@@ -558,7 +558,7 @@ msgstr "1 aggiornamento disponibile"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
-#: src/tray/src/tray.rs:224
+#: src/tray/src/tray.rs:225
 #, sh-format
 msgid "Run Cachy-Update"
 msgstr "Avvia Cachy-Update"
@@ -888,4 +888,3 @@ msgstr "Controlla gli aggiornamenti"
 #: src/tray/src/tray.rs:244
 msgid "Exit"
 msgstr "Esci"
-
