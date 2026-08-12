@@ -13,6 +13,7 @@ Comment[ka]=Cachy-Update-ის აპლეტი სისტემურ ს�
 Comment[nb]=Miniprogam for å legge Cachy-Update i systemkurven
 Comment[ru]=Апплет Cachy-Update в системном трее
 Comment[tr]=Cachy-Update sistem tepsisi uygulaması
+Comment[zh_CN]=Cachy-Update 的系统托盘小程序
 Icon=cachy-update_updates-available-blue
 Type=Application
 Exec=/bin/sh -c "sleep 3 && arch-update --tray"
