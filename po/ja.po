@@ -541,9 +541,10 @@ msgstr "1 件のアップデートがあります"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
+#: src/tray/src/tray.rs:225
 #, sh-format
-msgid "Run ${_name}"
-msgstr "${_name} を実行"
+msgid "Run Cachy-Update"
+msgstr "Cachy-Update を実行"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
@@ -854,10 +855,6 @@ msgstr "最終確認: {last_check}前"
 #, rust-format
 msgid "Next check in {next_check}"
 msgstr "次回の確認まで {next_check}"
-
-#: src/tray/src/tray.rs:225
-msgid "Run Arch-Update"
-msgstr "Arch-Update を実行"
 
 #: src/tray/src/tray.rs:233
 msgid "Check for updates"

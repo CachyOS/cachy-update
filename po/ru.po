@@ -531,9 +531,10 @@ msgstr "Доступно 1 обновление"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
+#: src/tray/src/tray.rs:225
 #, sh-format
-msgid "Run ${_name}"
-msgstr "Запустить ${_name}"
+msgid "Run Cachy-Update"
+msgstr "Запустить Cachy-Update"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
@@ -839,10 +840,6 @@ msgstr "Последняя проверка: {last_check} назад"
 #, rust-format
 msgid "Next check in {next_check}"
 msgstr "Следующая проверка через {next_check}"
-
-#: src/tray/src/tray.rs:225
-msgid "Run Arch-Update"
-msgstr "Запустить Arch-Update"
 
 #: src/tray/src/tray.rs:233
 msgid "Check for updates"

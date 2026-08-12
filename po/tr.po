@@ -552,9 +552,10 @@ msgstr "1 güncelleme var"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
+#: src/tray/src/tray.rs:225
 #, sh-format
-msgid "Run ${_name}"
-msgstr "${_name}'i çalıştır"
+msgid "Run Cachy-Update"
+msgstr "Cachy-Update'i çalıştır"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
@@ -871,10 +872,6 @@ msgstr "Son kontrol: {last_check} önce"
 #, rust-format
 msgid "Next check in {next_check}"
 msgstr "Sonraki kontrol: {next_check} sonra"
-
-#: src/tray/src/tray.rs:225
-msgid "Run Arch-Update"
-msgstr "Arch-Update'i çalıştır"
 
 #: src/tray/src/tray.rs:233
 msgid "Check for updates"

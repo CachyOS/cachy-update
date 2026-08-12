@@ -52,7 +52,7 @@ impl ksni::Tray for ArchUpdateTray {
     // Set tooltip
     fn tool_tip(&self) -> ksni::ToolTip {
         ksni::ToolTip {
-            title: "Arch-Update".into(),
+            title: "Cachy-Update".into(),
             ..Default::default()
         }
     }
@@ -222,7 +222,7 @@ impl ksni::Tray for ArchUpdateTray {
         menu.extend([
             MenuItem::Separator,
             StandardItem {
-                label: gettext("Run Arch-Update"),
+                label: gettext("Run Cachy-Update"),
                 activate: Box::new(move |_| {
                     tray_helpers::launch_arch_update(&desktop_file);
                 }),

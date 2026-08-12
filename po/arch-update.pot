@@ -480,8 +480,9 @@ msgstr ""
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
+#: src/tray/src/tray.rs:225
 #, sh-format
-msgid "Run ${_name}"
+msgid "Run Cachy-Update"
 msgstr ""
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
@@ -774,10 +775,6 @@ msgstr ""
 #: src/tray/src/tray.rs:208
 #, rust-format
 msgid "Next check in {next_check}"
-msgstr ""
-
-#: src/tray/src/tray.rs:225
-msgid "Run Arch-Update"
 msgstr ""
 
 #: src/tray/src/tray.rs:233

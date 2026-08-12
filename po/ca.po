@@ -557,9 +557,10 @@ msgstr "1 actualització disponible"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
+#: src/tray/src/tray.rs:225
 #, sh-format
-msgid "Run ${_name}"
-msgstr "Executa ${_name}"
+msgid "Run Cachy-Update"
+msgstr "Executa Cachy-Update"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
@@ -878,10 +879,6 @@ msgstr ""
 #, rust-format
 msgid "Next check in {next_check}"
 msgstr "Propera comprovació en {next_check}"
-
-#: src/tray/src/tray.rs:225
-msgid "Run Arch-Update"
-msgstr "Executa Arch-Update"
 
 #: src/tray/src/tray.rs:233
 msgid "Check for updates"
