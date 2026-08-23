@@ -508,9 +508,10 @@ msgstr "1 个更新可用"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
+#: src/tray/src/tray.rs:225
 #, sh-format
-msgid "Run ${_name}"
-msgstr "运行 ${_name}"
+msgid "Run Cachy-Update"
+msgstr "运行 Cachy-Update"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
@@ -807,10 +808,6 @@ msgstr "上次检查：{last_check} 前"
 #, rust-format
 msgid "Next check in {next_check}"
 msgstr "下次检查：{next_check}"
-
-#: src/tray/src/tray.rs:237
-msgid "Run Arch-Update"
-msgstr "运行 Arch-Update"
 
 #: src/tray/src/tray.rs:245
 msgid "Check for updates"

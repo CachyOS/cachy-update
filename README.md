@@ -1,4 +1,4 @@
-# Arch-Update
+# Cachy-Update (fork of [Arch-Update](https://github.com/Antiz96/arch-update))
 
 <p align="center">
   <img width="460" height="300" src="https://github.com/user-attachments/assets/5782bd11-084a-4ca3-b599-1c322ee11b84">
@@ -16,10 +16,10 @@
 
 ## Description
 
-An interactive update notifier & applier for Arch Linux that assists you with important pre / post update tasks.  
+An interactive update notifier & applier for CachyOS that assists you with important pre / post update tasks.  
 Includes a systray applet for an easy integration with any desktop / graphical environment.
 
-Arch-Update is designed to follow usual system maintenance steps, as [described in the Arch Wiki](https://wiki.archlinux.org/title/System_maintenance).
+Cachy-Update is designed to follow usual system maintenance steps, as [described in the Arch Wiki](https://wiki.archlinux.org/title/System_maintenance).
 
 Features:
 
@@ -27,7 +27,6 @@ Features:
 - Check for recent Arch Linux news (and offers to display them if there are).
 - Check for orphan packages (and offers to remove them if there are).
 - Check for old & uninstalled packages in cache (and offers to remove them if there are).
-- Check for pacnew & pacsave files (and offers to process them if there are).
 - Check for pending kernel update requiring a reboot (and offers to do so if there's one).
 - Check for services requiring a post upgrade restart (and offers to do so if there are).
 - Support for `sudo`, `sudo-rs`, `doas` & `run0`.
@@ -42,9 +41,13 @@ Optional support for:
 
 ## Installation
 
-### AUR
+### From Repo
 
-Install the [arch-update](https://aur.archlinux.org/packages/arch-update "arch-update AUR package") AUR package (also check the list of optional dependencies for anything you may want or need).
+Install the [cachy-update](https://packages.cachyos.org/package/cachyos/any/cachy-update) package from CachyOS repos (also check the list of optional dependencies for anything you may want or need):
+
+```bash
+sudo pacman -S cachy-update
+```
 
 ### From Source
 
@@ -74,9 +77,9 @@ Install required build dependencies:
 sudo pacman -S --asdeps make scdoc bats cargo
 ```
 
-Download the archive of the [latest stable release](https://github.com/Antiz96/arch-update/releases/latest) and extract it (alternatively, you can clone this repository with `git`).
+Download the archive of the [latest tag](https://github.com/CachyOS/cachy-update/tags) and extract it (alternatively, you can clone this repository with `git`).
 
-To build and install `arch-update`, go into the extracted / cloned directory and run the following commands:
+To build and install `cachy-update`, go into the extracted / cloned directory and run the following commands:
 
 ```bash
 make
@@ -90,7 +93,7 @@ Once the installation is complete, you may optionally clean up the directory of 
 make clean
 ```
 
-To uninstall `arch-update`, go into the extracted / cloned directory and run the following command:
+To uninstall `cachy-update`, go into the extracted / cloned directory and run the following command:
 
 ```bash
 sudo make uninstall
@@ -99,26 +102,26 @@ sudo make uninstall
 ## Usage
 
 For desktop machines, the usage consist of starting [the systray applet](#the-systray-applet) and enabling [the automated update checks](#the-automated-update-checks).  
-For headless machines, `Arch-Update` includes an extensive CLI.
+For headless machines, `Cachy-Update` includes an extensive CLI.
 
 ### The systray applet
 
 To start the systray applet and enable it automatically at boot, run the following command (preferred method for most environments, uses [XDG Autostart](https://wiki.archlinux.org/title/XDG_Autostart)):
 
 ```bash
-arch-update --tray --enable
+cachy-update --tray --enable
 ```
 
 In case your graphical environment doesn't support XDG Autostart, add the following command your environment auto-start method instead:
 
-*Note that the small startup delay in the form of the `sleep 3` command may not always be required but acts as a useful trick to avoid eventual [race condition](https://en.wikipedia.org/wiki/Race_condition) issues which may lead to the systray applet unexpectedly not starting at boot. I therefore recommend its usage as a safety measure (this small delay is already applied by default with the XDG Autostart / `arch-update --tray --enable` method).*
+*Note that the small startup delay in the form of the `sleep 3` command may not always be required but acts as a useful trick to avoid eventual [race condition](https://en.wikipedia.org/wiki/Race_condition) issues which may lead to the systray applet unexpectedly not starting at boot. I therefore recommend its usage as a safety measure (this small delay is already applied by default with the XDG Autostart / `cachy-update --tray --enable` method).*
 
 ```bash
-sleep 3 && arch-update --tray
+sleep 3 && cachy-update --tray
 ```
 
 The systray icon dynamically changes to indicate the current state of your system ('up to date' or 'updates available'). When clicked, it launches `arch-update` in a terminal window via the [arch-update.desktop](https://github.com/Antiz96/arch-update/blob/main/res/desktop/arch-update.desktop) file.  
-The systray applet menu shows further information (like the list of pending updates, time of the last and next checks, ...) and allows to trigger specific actions (like running Arch-Update, check for updates, ...). See [screenshots](#screenshots) for more details.
+The systray applet menu shows further information (like the list of pending updates, time of the last and next checks, ...) and allows to trigger specific actions (like running Cachy-Update, check for updates, ...). See [screenshots](#screenshots) for more details.
 
 **Notes:**
 
@@ -130,10 +133,10 @@ The systray applet menu shows further information (like the list of pending upda
 To enable automated and periodic checks for available updates, run the following command:
 
 ```bash
-arch-update --check --enable
+cachy-update --check --enable
 ```
 
-By default, a check is performed **at boot and then once every 6 hours**. The check cycle can be customized, see [this chapter](#modify-the-check-cycle).
+By default, a check is performed **at boot and then once a day**. The check cycle can be customized, see [this chapter](#modify-the-check-cycle).
 
 ### Screenshots
 
@@ -146,7 +149,7 @@ With [the automated update checks](#the-automated-update-checks) enabled, checks
 
 ![check_for_updates](https://github.com/user-attachments/assets/4b73946d-f9f5-4be6-87b8-42112fca642d)
 
-If there are new available updates, the systray icon shows a red circle and a desktop notification indicating the number of available updates is sent. You can directly run Arch-Update from it or close / dismiss it thanks to the related click actions:
+If there are new available updates, the systray icon shows a red circle and a desktop notification indicating the number of available updates is sent. You can directly run Cachy-Update from it or close / dismiss it thanks to the related click actions:
 
 ![notif](https://github.com/user-attachments/assets/d96b1831-fc11-4343-9f81-eee2a906961b)
 
@@ -162,65 +165,66 @@ A "All" dropdown menu gathering the number and the list of pending updates for a
 
 ![aur](https://github.com/user-attachments/assets/cf9cd829-fc97-4a05-9a6a-f5cba1649e29)
 
-When the systray icon is left-clicked, `arch-update` is run in a terminal window (alternatively, you can click the "*X* update(s) available" entry or the dedicated "Run Arch-Update" one from the right-click menu):
+When the systray icon is left-clicked, `arch-update` is run in a terminal window (alternatively, you can click the "*X* update(s) available" entry or the dedicated "Run Cachy-Update" one from the right-click menu):
 
 ![run](https://github.com/user-attachments/assets/874e4f9e-4498-41bf-b257-1e5ecb782377)
 
-If at least one Arch Linux news has been published since the last run, `Arch-Update` will offer you to read the latest Arch Linux news directly from the terminal window.  
+If at least one Arch Linux news has been published since the last run, `Cachy-Update` will offer you to read the latest Arch Linux news directly from the terminal window.  
 The news published since the last run are tagged as `[NEW]`:
 
 ![news](https://github.com/user-attachments/assets/42472294-ce87-4d86-87fc-3adb0f6f3e9e)
 
-If no news has been published since the last run, `Arch-Update` directly asks for your confirmation to proceed with update.
+If no news has been published since the last run, `Cachy-Update` directly asks for your confirmation to proceed with update.
 
-From there, just let `Arch-Update` guide you through the various steps required for a complete and proper update of your system! :smile:
+From there, just let `Cachy-Update` guide you through the various steps required for a complete and proper update of your system! :smile:
 
-Certain options can be enabled, disabled or modified via the `arch-update.conf` configuration file. See the [arch-update.conf(5) man page](https://raw.githubusercontent.com/Antiz96/arch-update/refs/heads/main/doc/man/arch-update.conf.5.scd) for more details.
+Certain options can be enabled, disabled or modified via the `arch-update.conf` configuration file. See the [arch-update.conf(5) man page](https://raw.githubusercontent.com/CachyOS/cachy-update/refs/heads/main/doc/man/arch-update.conf.5.scd) for more details.
 
 ## Documentation
 
-### arch-update
+### cachy-update
 
-See `arch-update --help` and the [arch-update(1) man page](https://raw.githubusercontent.com/Antiz96/arch-update/refs/heads/main/doc/man/arch-update.1.scd).
+See `cachy-update --help` and the [arch-update(1) man page](https://raw.githubusercontent.com/CachyOS/cachy-update/refs/heads/main/doc/man/arch-update.1.scd).
 
 ### arch-update configuration file
 
-See the [arch-update.conf(5) man page](https://raw.githubusercontent.com/Antiz96/arch-update/refs/heads/main/doc/man/arch-update.conf.5.scd).
+See the [arch-update.conf(5) man page](https://raw.githubusercontent.com/CachyOS/cachy-update/refs/heads/main/doc/man/arch-update.conf.5.scd).
 
 ## Tips & tricks and troubleshooting
 
 ### Modify the check cycle
 
-If you enabled [the automated update checks](#the-automated-update-checks), a check for available updates is automatically launched at boot and then once each 6 hours.
+If you enabled [the automated update checks](#the-automated-update-checks), a check for available updates is automatically launched at boot and then once a day.
 
 If you want to customize the check cycle, run `systemctl --user edit --full arch-update.timer` and modify the `OnUnitActiveSec` value to your liking.  
-For instance, if you want `Arch-Update` to check for new updates every 4 hours instead:
+For instance, if you want `Cachy-Update` to check for new updates every 4 hours instead:
 
 ```text
 [...]
 [Timer]
-OnStartupSec=15
-OnUnitActiveSec=4h
+OnStartupSec=2min
+RandomizedDelaySec=4h
+OnUnitActiveSec=1h
 [...]
 ```
 
 Time units are `s` for seconds, `m` for minutes, `h` for hours, `d` for days...  
 See <https://www.freedesktop.org/software/systemd/man/latest/systemd.time.html#Parsing%20Time%20Spans> for more details.
 
-In case you want `Arch-Update` to check for new updates only once at boot, you can simply delete the `OnUnitActiveSec` line completely.
+In case you want `Cachy-Update` to check for new updates only once at boot, you can simply delete the `OnUnitActiveSec` line completely.
 
-### Run Arch-Update in a specific terminal emulator
+### Run Cachy-Update in a specific terminal emulator
 
 `gio` (used to launch the `arch-update` terminal application via the `arch-update.desktop` file when the systray applet is clicked) currently has a default limited list of known terminal emulators.  
-As such, if you don't have any of these "known" terminal emulators installed on your system, you might face an issue where clicking the systray applet does nothing (as `gio` couldn't find a terminal emulator from the said list). Incidentally, you might have multiple terminal emulators installed on your system and you may want to force Arch-Update to use a specific one. In both cases, you can specify which terminal emulator to use.
+As such, if you don't have any of these "known" terminal emulators installed on your system, you might face an issue where clicking the systray applet does nothing (as `gio` couldn't find a terminal emulator from the said list). Incidentally, you might have multiple terminal emulators installed on your system and you may want to force Cachy-Update to use a specific one. In both cases, you can specify which terminal emulator to use.
 
 To do so, install the [xdg-terminal-exec AUR package](https://aur.archlinux.org/packages/xdg-terminal-exec), create the `~/.config/xdg-terminals.list` file and add the name of the `.desktop` file of your terminal emulator of choice in it (e.g. `Alacritty.desktop`).  
 See <https://github.com/Vladimir-csp/xdg-terminal-exec?tab=readme-ov-file#configuration> for more details.
 
 ## Contributing
 
-See the [contributing guidelines](https://github.com/Antiz96/arch-update/blob/main/CONTRIBUTING.md).
+See the [contributing guidelines](https://github.com/CachyOS/cachy-update/blob/main/CONTRIBUTING.md).
 
 ## License
 
-Arch-Update is licensed under the [GPL-3.0 license](https://github.com/Antiz96/arch-update/blob/main/LICENSE) (or any later version of that license).
+Arch-Update is licensed under the [GPL-3.0 license](https://github.com/CachyOS/cachy-update/blob/main/LICENSE) (or any later version of that license).

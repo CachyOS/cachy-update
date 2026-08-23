@@ -26,7 +26,7 @@ pub struct ArchUpdateTray {
 impl ksni::Tray for ArchUpdateTray {
     // Set id
     fn id(&self) -> String {
-        "Arch-Update".into()
+        "Cachy-Update".into()
     }
 
     // Set category
@@ -234,7 +234,7 @@ impl ksni::Tray for ArchUpdateTray {
         menu.extend([
             MenuItem::Separator,
             StandardItem {
-                label: gettext("Run Arch-Update"),
+                label: gettext("Run Cachy-Update"),
                 activate: Box::new(move |_| {
                     tray_helpers::launch_arch_update(&desktop_file);
                 }),
