@@ -26,7 +26,12 @@ pub struct ArchUpdateTray {
 impl ksni::Tray for ArchUpdateTray {
     // Set id
     fn id(&self) -> String {
-        "Arch-Update".into()
+        "Cachy-Update".into()
+    }
+
+    // Set category
+    fn category(&self) -> ksni::Category {
+        ksni::Category::SystemServices
     }
 
     // Set icon
@@ -46,13 +51,20 @@ impl ksni::Tray for ArchUpdateTray {
 
     // Set title
     fn title(&self) -> String {
-        "Arch-Update".into()
+        self.id()
     }
 
     // Set tooltip
     fn tool_tip(&self) -> ksni::ToolTip {
         ksni::ToolTip {
-            title: "Cachy-Update".into(),
+            title: self.id(),
+            description: match tray_helpers::get_updates_count(&self.updates_statefile_type.all) {
+                0 => gettext("System is up to date"),
+                1 => gettext("1 update available"),
+                count => {
+                    gettext("{count} updates available").replace("{count}", &count.to_string())
+                }
+            },
             ..Default::default()
         }
     }
