@@ -1,4 +1,4 @@
-arch-update.conf(5) ["Arch-Update 4.2.0" ["Arch-Update Manual"]]
+arch-update.conf(5) ["Arch-Update 4.2.1" ["Arch-Update Manual"]]
 
 # NAME
 
@@ -83,4 +83,4 @@ Please report bugs to the GitHub page: https://github.com/Antiz96/arch-update/is
 
 # AUTHOR
 
-Robin Candau <robincandau@protonmail.com>
+Robin Candau <robincandau@mailbox.org>
