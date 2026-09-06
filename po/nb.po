@@ -6,7 +6,7 @@
 # SPDX-FileCopyrightText: 2026 Kjetil Sorlund <translate@sorlund.no>
 msgid ""
 msgstr ""
-"Project-Id-Version: Arch-Update 4.2.1\n"
+"Project-Id-Version: Arch-Update 4.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/Antiz96/arch-update/issues\n"
 "POT-Creation-Date: 2024-03-17 16:22+0100\n"
 "PO-Revision-Date: 2026-09-02 10:36+0200\n"
@@ -804,26 +804,26 @@ msgstr "Oppdaterer Flatpak-pakker…\\n"
 msgid "The update has been applied\\n"
 msgstr "Oppdateringen er blitt installert\\n"
 
-#: src/tray/src/tray_helpers.rs:108
+#: src/tray/src/tray_helpers.rs:116
 msgid "Next page"
 msgstr "Neste side"
 
-#: src/tray/src/tray_helpers.rs:253
+#: src/tray/src/tray_helpers.rs:261
 #, rust-format
 msgid "{days}d"
 msgstr "{days}d"
 
-#: src/tray/src/tray_helpers.rs:256
+#: src/tray/src/tray_helpers.rs:264
 #, rust-format
 msgid "{hours}h"
 msgstr "{hours}t"
 
-#: src/tray/src/tray_helpers.rs:259
+#: src/tray/src/tray_helpers.rs:267
 #, rust-format
 msgid "{minutes}m"
 msgstr "{minutes}m"
 
-#: src/tray/src/tray_helpers.rs:262
+#: src/tray/src/tray_helpers.rs:270
 #, rust-format
 msgid "{seconds}s"
 msgstr "{seconds}s"

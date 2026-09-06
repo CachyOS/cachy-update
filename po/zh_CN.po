@@ -7,7 +7,7 @@
 # taotieren <admin@taotieren.com>, 2026
 msgid ""
 msgstr ""
-"Project-Id-Version: Arch-Update 4.2.1\n"
+"Project-Id-Version: Arch-Update 4.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/Antiz96/arch-update/issues\n"
 "POT-Creation-Date: 2024-03-17 16:22+0100\n"
 "PO-Revision-Date: 2026-08-12 12:00+0800\n"
@@ -746,26 +746,26 @@ msgstr "正在更新 Flatpak 包...\\n"
 msgid "The update has been applied\\n"
 msgstr "已应用更新\\n"
 
-#: src/tray/src/tray_helpers.rs:108
+#: src/tray/src/tray_helpers.rs:116
 msgid "Next page"
 msgstr "下一页"
 
-#: src/tray/src/tray_helpers.rs:253
+#: src/tray/src/tray_helpers.rs:261
 #, rust-format
 msgid "{days}d"
 msgstr "{days} 天"
 
-#: src/tray/src/tray_helpers.rs:256
+#: src/tray/src/tray_helpers.rs:264
 #, rust-format
 msgid "{hours}h"
 msgstr "{hours} 小时"
 
-#: src/tray/src/tray_helpers.rs:259
+#: src/tray/src/tray_helpers.rs:267
 #, rust-format
 msgid "{minutes}m"
 msgstr "{minutes} 分钟"
 
-#: src/tray/src/tray_helpers.rs:262
+#: src/tray/src/tray_helpers.rs:270
 #, rust-format
 msgid "{seconds}s"
 msgstr "{seconds} 秒"
