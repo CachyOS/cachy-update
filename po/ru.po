@@ -531,7 +531,7 @@ msgstr "Доступно 1 обновление"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
-#: src/tray/src/tray.rs:225
+#: src/tray/src/tray.rs:237
 #, sh-format
 msgid "Run Cachy-Update"
 msgstr "Запустить Cachy-Update"
