@@ -550,7 +550,7 @@ msgstr "Er is 1 update beschikbaar"
 
 #: src/lib/notification.sh:16 src/lib/notification.sh:19
 #: src/lib/notification.sh:23 src/lib/notification.sh:25
-#: src/tray/src/tray.rs:237
+#: src/tray/src/tray.rs:245
 #, sh-format
 msgid "Run Cachy-Update"
 msgstr "Cachy-Update starten"
