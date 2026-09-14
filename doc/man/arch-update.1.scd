@@ -133,8 +133,9 @@ For instance, if you want `Arch-Update` to check for new updates every 4 hours i
 ```
 [...]
 [Timer]
-OnStartupSec=15
-OnUnitActiveSec=4h
+OnStartupSec=2min
+RandomizedDelaySec=4h
+OnUnitActiveSec=1h
 [...]
 ```
 
