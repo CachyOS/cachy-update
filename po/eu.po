@@ -181,12 +181,12 @@ msgstr "Dagoeneko ${_name}-(r)en instantzia bat exekutatzen ari da\\n"
 #: src/lib/full_upgrade.sh:14
 #, sh-format
 msgid "Proceed anyway? [y/N]"
-msgstr ""
+msgstr "Jarraitu hala ere? [b/E]"
 
 #: src/lib/full_upgrade.sh:23
 #, sh-format
 msgid "The execution has been aborted\\n"
-msgstr ""
+msgstr "Exekuzioa bertan behera utzi da\\n"
 
 #: src/lib/gen-config.sh:19
 #, sh-format
